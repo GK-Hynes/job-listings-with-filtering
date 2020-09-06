@@ -1,13 +1,13 @@
 import React from "react";
 import JobBoard from "./JobBoard";
-import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header>
+    <div className="">
+      <header className="header w-full h-40 bg-desaturated-dark-cyan"></header>
+      <main className="flex flex-col h-screen w-full">
         <JobBoard />
-      </header>
+      </main>
     </div>
   );
 }

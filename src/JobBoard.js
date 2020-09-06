@@ -3,8 +3,9 @@ import JobListing from "./JobListing";
 
 const JobBoard = () => {
   return (
-    <div className="margin-auto">
-      <h1 className="text-2xl text-gray-500">JobBoard</h1>
+    <div className="w-full h-full m-0 font-spartan bg-light-gray-cyan">
+      <JobListing />
+      <JobListing />
       <JobListing />
     </div>
   );
