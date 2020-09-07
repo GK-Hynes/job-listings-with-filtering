@@ -3,7 +3,7 @@ import { ReactComponent as Logo } from "./assets/images/photosnap.svg";
 
 const JobListing = () => {
   return (
-    <div className="flex flex-row mx-auto my-4 max-w-screen-lg bg-white shadow-xl border-solid border-teal-500 border-l-4 rounded">
+    <div className="flex flex-row mx-auto mb-6 max-w-screen-lg bg-white shadow-xl border-solid border-teal-500 border-l-4 rounded">
       <div className="flex flex-row justify-center items-center p-4">
         <div className="h-20 w-20 ml-4">
           <Logo />

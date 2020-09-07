@@ -3641,6 +3641,14 @@ video {
   background-image: linear-gradient(to top left, var(--gradient-color-stops));
 }
 
+.bg-header-desktop {
+  background-image: url('/assets/images/bg-header-desktop.svg');
+}
+
+.bg-header-mobile {
+  background-image: url('/assets/images/bg-header-mobile.svg');
+}
+
 .from-transparent {
   --gradient-from-color: transparent;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -22443,6 +22451,14 @@ video {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .sm\:bg-header-desktop {
+    background-image: url('/assets/images/bg-header-desktop.svg');
+  }
+
+  .sm\:bg-header-mobile {
+    background-image: url('/assets/images/bg-header-mobile.svg');
+  }
+
   .sm\:from-transparent {
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -41213,6 +41229,14 @@ video {
 
   .md\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
+  }
+
+  .md\:bg-header-desktop {
+    background-image: url('/assets/images/bg-header-desktop.svg');
+  }
+
+  .md\:bg-header-mobile {
+    background-image: url('/assets/images/bg-header-mobile.svg');
   }
 
   .md\:from-transparent {
@@ -59987,6 +60011,14 @@ video {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
   }
 
+  .lg\:bg-header-desktop {
+    background-image: url('/assets/images/bg-header-desktop.svg');
+  }
+
+  .lg\:bg-header-mobile {
+    background-image: url('/assets/images/bg-header-mobile.svg');
+  }
+
   .lg\:from-transparent {
     --gradient-from-color: transparent;
     --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(0, 0, 0, 0));
@@ -78757,6 +78789,14 @@ video {
 
   .xl\:bg-gradient-to-tl {
     background-image: linear-gradient(to top left, var(--gradient-color-stops));
+  }
+
+  .xl\:bg-header-desktop {
+    background-image: url('/assets/images/bg-header-desktop.svg');
+  }
+
+  .xl\:bg-header-mobile {
+    background-image: url('/assets/images/bg-header-mobile.svg');
   }
 
   .xl\:from-transparent {

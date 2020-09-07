@@ -12,7 +12,11 @@ module.exports = {
         "light-gray-cyan-filters": "hsl(180, 31%, 95%)",
         "dark-gray-cyan": "hsl(180, 8%, 52%)",
         "very-dark-gray-cyan": "hsl(180, 14%, 20%)"
-      }
+      },
+      backgroundImage: (theme) => ({
+        "header-desktop": "url('/assets/images/bg-header-desktop.svg')",
+        "header-mobile": "url('/assets/images/bg-header-mobile.svg')"
+      })
     },
     screens: {
       sm: "640px",
