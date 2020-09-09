@@ -23,25 +23,25 @@ const JobListing = ({ job }) => {
     <div
       className={`${
         featured && `border-solid border-teal-500 border-l-4`
-      } flex flex-row mx-auto mb-6 w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md`}
+      } flex flex-col lg:flex-row mx-auto mb-10 lg:mb-6 px-4 w-11/12 lg:w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md`}
     >
-      <div className="flex justify-center items-center p-4">
-        <div className="h-20 w-20 ml-8">
+      <div className="flex lg:justify-center lg:items-center lg:px-4 lg:py-8">
+        <div className="h-12 w-12 -mt-6 lg:mt-0 lg:h-24 lg:w-24">
           <img src={logo} alt={company} />
         </div>
       </div>
-      <div className="py-8 px-4">
-        <div className="flex items-center text-sm">
-          <h3 className="mr-4 text-desaturated-dark-cyan font-bold py-2">
+      <div className="py-4 md:px-2 border-b-2 border-solid border-gray-400 lg:border-none">
+        <div className="flex items-center py-2">
+          <h3 className="mr-4 text-sm text-desaturated-dark-cyan font-bold">
             {company}
           </h3>
           {job.new && (
-            <span className="mr-4 text-xxs font-bold text-white uppercase bg-desaturated-dark-cyan px-2 py-2 rounded-full leading-none align-middle">
+            <span className="mr-4 text-xs font-bold text-white uppercase bg-desaturated-dark-cyan px-2 py-1 rounded-full">
               New!
             </span>
           )}
           {featured && (
-            <span className="mr-4 text-xxs font-bold text-white uppercase px-2 py-2 bg-black rounded-full leading-none align-middle">
+            <span className="mr-4 text-xs font-bold text-white uppercase px-2 py-1 bg-gray-900 rounded-full">
               Featured
             </span>
           )}
@@ -57,12 +57,12 @@ const JobListing = ({ job }) => {
           <li className="mr-4">{location}</li>
         </ul>
       </div>
-      <div className="flex justify-center p-4 ml-auto text-sm">
+      <div className="flex lg:justify-center lg:items-center py-4 lg:ml-auto text-sm">
         <ul className="flex flex-wrap items-center">
           {tags &&
             tags.map((tag, i) => (
               <li key={i}>
-                <button className="mr-4 p-2 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded hover:bg-desaturated-dark-cyan hover:text-white">
+                <button className="mr-4 mb-4 lg:mb-0 p-2 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded hover:bg-desaturated-dark-cyan hover:text-white">
                   {tag}
                 </button>
               </li>
