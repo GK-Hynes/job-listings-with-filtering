@@ -1,11 +1,11 @@
 import React from "react";
 import JobListing from "./JobListing";
 
-const JobBoard = ({ jobs }) => {
+const JobBoard = ({ jobs, handleFilter }) => {
   return (
-    <div className="w-full h-full m-0 pt-20 font-spartan bg-light-gray-cyan">
+    <div className="w-full h-full m-0 pt-20 font-spartan">
       {jobs.map((job) => (
-        <JobListing job={job} key={job.id} />
+        <JobListing job={job} key={job.id} handleFilter={handleFilter} />
       ))}
     </div>
   );

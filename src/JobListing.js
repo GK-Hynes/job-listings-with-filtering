@@ -1,6 +1,6 @@
 import React from "react";
 
-const JobListing = ({ job }) => {
+const JobListing = ({ job, handleFilter }) => {
   const {
     company,
     logo,
@@ -62,7 +62,10 @@ const JobListing = ({ job }) => {
           {tags &&
             tags.map((tag, i) => (
               <li key={i}>
-                <button className="mr-4 mb-4 lg:mb-0 p-2 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded hover:bg-desaturated-dark-cyan hover:text-white">
+                <button
+                  className="mr-4 mb-4 lg:mb-0 p-2 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded hover:bg-desaturated-dark-cyan hover:text-white"
+                  onClick={() => handleFilter(tag)}
+                >
                   {tag}
                 </button>
               </li>
