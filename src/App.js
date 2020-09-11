@@ -5,11 +5,9 @@ import data from "./data.json";
 
 function App() {
   const [jobs, setJobs] = useState([]);
-  const [filters, setFilters] = useState(["CSS"]);
+  const [filters, setFilters] = useState([]);
 
-  useEffect(() => {
-    setJobs(data);
-  }, []);
+  useEffect(() => setJobs(data), []);
 
   const filterJobs = ({ role, level, languages, tools }) => {
     if (filters.length === 0) {
@@ -21,15 +19,22 @@ function App() {
     tags.push(role, level, languages, tools);
     tags = tags.flat();
 
-    return tags.some((tag) => filters.includes(tag));
+    return filters.every((filter) => tags.includes(filter));
   };
 
   const handleFilter = (tag) => {
-    setFilters(...filters, tag);
+    // Don't add same tag twice
+    if (filters.includes(tag)) return;
+
+    setFilters([...filters, tag]);
   };
 
-  const removeFilter = (chosenFilter) => {
-    setFilters(filters.filter((fil) => fil !== chosenFilter));
+  const removeFilter = (selectedFilter) => {
+    setFilters(filters.filter((filter) => filter !== selectedFilter));
+  };
+
+  const clearFilters = () => {
+    setFilters([]);
   };
 
   const filteredJobs = jobs.filter(filterJobs);
@@ -44,7 +49,13 @@ function App() {
         />
       </header>
       <main className="flex flex-col min-h-screen w-full bg-light-gray-cyan">
-        <Filters filters={filters} removeFilter={removeFilter} />
+        {filters.length > 0 && (
+          <Filters
+            filters={filters}
+            removeFilter={removeFilter}
+            clearFilters={clearFilters}
+          />
+        )}
         <JobBoard jobs={filteredJobs} handleFilter={handleFilter} />
       </main>
     </div>
