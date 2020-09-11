@@ -40,14 +40,8 @@ function App() {
   const filteredJobs = jobs.filter(filterJobs);
 
   return (
-    <div className="">
-      <header className="w-full h-40  bg-desaturated-dark-cyan">
-        <img
-          className="w-full h-full"
-          src="/images/bg-header-desktop.svg"
-          alt=""
-        />
-      </header>
+    <>
+      <header className="header w-full h-40  bg-desaturated-dark-cyan"></header>
       <main className="flex flex-col min-h-screen w-full bg-light-gray-cyan">
         {filters.length > 0 && (
           <Filters
@@ -58,7 +52,7 @@ function App() {
         )}
         <JobBoard jobs={filteredJobs} handleFilter={handleFilter} />
       </main>
-    </div>
+    </>
   );
 }
 

@@ -3,3 +3,15 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.header {
+  background: url(/images/bg-header-mobile.svg) center/cover no-repeat;
+  background-color: hsl(180, 29%, 50%);
+}
+
+@media (min-width: 640px) {
+  .header {
+    background: url(/images/bg-header-desktop.svg) center/cover no-repeat;
+    background-color: hsl(180, 29%, 50%);
+  }
+}
