@@ -23,14 +23,14 @@ const JobListing = ({ job, handleFilter }) => {
     <div
       className={`${
         featured && `border-solid border-teal-500 border-l-4`
-      } flex flex-col lg:flex-row mx-auto mb-10 lg:mb-6 px-4 w-11/12 lg:w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md`}
+      } flex flex-col md:flex-row mx-auto mb-10 lg:mb-6 px-4 w-11/12 lg:w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md`}
     >
       <div className="flex lg:justify-center lg:items-center lg:px-4 lg:py-8">
         <div className="h-12 w-12 -mt-6 lg:mt-0 lg:h-24 lg:w-24">
           <img src={logo} alt={company} />
         </div>
       </div>
-      <div className="py-4 md:px-2 border-b-2 border-solid border-gray-400 lg:border-none">
+      <div className="py-4 md:px-2 border-b-2 border-solid border-gray-400 md:border-none">
         <div className="flex items-center py-2">
           <h3 className="mr-4 text-sm text-desaturated-dark-cyan font-bold">
             {company}

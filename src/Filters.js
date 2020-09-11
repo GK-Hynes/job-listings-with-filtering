@@ -2,10 +2,13 @@ import React from "react";
 
 const Filters = ({ filters, removeFilter, clearFilters }) => {
   return (
-    <div className="flex p-4 -mt-10 mx-auto w-11/12 lg:w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md text-sm font-spartan">
+    <div className="flex flex-wrap p-4 -mt-10 mx-auto w-11/12 lg:w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md text-sm font-spartan">
       {filters.length > 0 &&
-        filters.map((filter) => (
-          <span className="inline-flex mr-4 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded">
+        filters.map((filter, i) => (
+          <span
+            className="flex mr-4 mb-4 sm:mb-0 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded"
+            key={i}
+          >
             <span className="p-2">{filter}</span>
             <button
               className="p-2 bg-desaturated-dark-cyan rounded-tr rounded-br hover:bg-gray-900"
@@ -16,7 +19,7 @@ const Filters = ({ filters, removeFilter, clearFilters }) => {
           </span>
         ))}
       <button
-        className="ml-auto font-bold underline text-desaturated-dark-cyan"
+        className="ml-auto font-bold text-gray-600 hover:text-desaturated-dark-cyan hover:underline"
         onClick={clearFilters}
       >
         Clear
