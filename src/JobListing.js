@@ -25,12 +25,12 @@ const JobListing = ({ job, handleFilter }) => {
         featured && `border-solid border-teal-500 border-l-4`
       }`}
     >
-      <div className="flex lg:justify-center lg:items-center lg:px-4 lg:py-8">
+      <div className="flex lg:justify-center lg:items-center lg:pr-4 lg:pl-6 lg:py-8">
         <div className="h-12 w-12 -mt-6 lg:mt-0 lg:h-24 lg:w-24">
-          <img src={logo} alt={company} />
+          <img className="w-full h-full" src={logo} alt={company} />
         </div>
       </div>
-      <div className="py-4 md:px-2 border-b-2 border-solid border-gray-400 lg:border-none">
+      <div className="py-4 md:px-2 lg:py-8 border-b-2 border-solid border-gray-400 lg:border-none">
         <div className="flex items-center py-2">
           <h3 className="mr-4 text-sm text-desaturated-dark-cyan font-bold">
             {company}
@@ -46,8 +46,8 @@ const JobListing = ({ job, handleFilter }) => {
             </span>
           )}
         </div>
-        <h2 className="mb-1 text-xl font-bold  tracking-tight hover:text-desaturated-dark-cyan">
-          <a href="#">{position}</a>
+        <h2 className="mb-1 text-xl font-bold  tracking-tight hover:text-desaturated-dark-cyan cursor-pointer">
+          {position}
         </h2>
         <ul className="flex items-center text-dark-gray-cyan tracking-tight">
           <li className="mr-4">{postedAt}</li>
