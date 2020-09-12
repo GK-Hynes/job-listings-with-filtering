@@ -2,16 +2,16 @@ import React from "react";
 
 const Filters = ({ filters, removeFilter, clearFilters }) => {
   return (
-    <div className="flex flex-wrap p-4 -mt-10 mx-auto w-11/12 lg:w-9/12 max-w-screen-xl bg-white shadow-xl rounded-md text-sm font-spartan">
+    <div className="flex flex-wrap -mt-10 p-4 bg-white shadow-xl rounded-md text-sm">
       {filters.length > 0 &&
         filters.map((filter, i) => (
           <span
-            className="flex mr-4 mb-4 sm:mb-0 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded"
+            className="flex mr-4 mb-4 md:mb-0 bg-light-gray-cyan-filters text-desaturated-dark-cyan font-bold rounded"
             key={i}
           >
             <span className="p-2">{filter}</span>
             <button
-              className="p-2 bg-desaturated-dark-cyan rounded-tr rounded-br hover:bg-gray-900"
+              className="p-2  rounded-tr rounded-br bg-desaturated-dark-cyan hover:bg-gray-900"
               onClick={() => removeFilter(filter)}
             >
               <img src="/images/icon-remove.svg" alt="Remove Icon" />

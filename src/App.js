@@ -46,19 +46,21 @@ function App() {
   const filteredJobs = jobs.filter(filterJobs);
 
   return (
-    <>
+    <div>
       <header className="header w-full h-40  bg-desaturated-dark-cyan"></header>
-      <main className="flex flex-col min-h-screen w-full bg-light-gray-cyan">
-        {filters.length > 0 && (
-          <Filters
-            filters={filters}
-            removeFilter={removeFilter}
-            clearFilters={clearFilters}
-          />
-        )}
-        <JobBoard jobs={filteredJobs} handleFilter={handleFilter} />
+      <main className="flex flex-col min-h-screen w-full bg-light-gray-cyan font-spartan">
+        <div className="container mx-auto px-4">
+          {filters.length > 0 && (
+            <Filters
+              filters={filters}
+              removeFilter={removeFilter}
+              clearFilters={clearFilters}
+            />
+          )}
+          <JobBoard jobs={filteredJobs} handleFilter={handleFilter} />
+        </div>
       </main>
-    </>
+    </div>
   );
 }
 
