@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Filters from "./Filters";
 import JobBoard from "./JobBoard";
-import data from "./data.json";
 
 function App() {
   const [jobs, setJobs] = useState([]);
   const [filters, setFilters] = useState([]);
 
-  useEffect(() => setJobs(data), []);
+  // Mock fetching data from API
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setJobs(data);
+      });
+  }, []);
 
   const filterJobs = ({ role, level, languages, tools }) => {
     if (filters.length === 0) {
