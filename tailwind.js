@@ -14,8 +14,8 @@ module.exports = {
         "very-dark-gray-cyan": "hsl(180, 14%, 20%)"
       },
       backgroundImage: (theme) => ({
-        "header-desktop": "url('/assets/images/bg-header-desktop.svg')",
-        "header-mobile": "url('/assets/images/bg-header-mobile.svg')"
+        "header-desktop": "url('/images/bg-header-desktop.svg')",
+        "header-mobile": "url('/images/bg-header-mobile.svg')"
       })
     },
     screens: {

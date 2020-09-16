@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div>
-      <header className="header w-full h-40  bg-desaturated-dark-cyan"></header>
+      <header className="w-full h-40  bg-desaturated-dark-cyan bg-header-mobile sm:bg-header-desktop bg-center bg-cover"></header>
       <main className="flex flex-col min-h-screen w-full bg-light-gray-cyan font-spartan">
         <div className="container mx-auto px-4">
           {filters.length > 0 && (
